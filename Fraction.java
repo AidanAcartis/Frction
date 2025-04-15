@@ -77,6 +77,13 @@ public class Fraction {
         return new Fraction(this.numerator * other.denominator, this.denominator * other.numerator);
     }
 
+    public Fraction divide(int value) {
+        if (value==0) {
+            throw new ArithmeticException("Division par zéro");
+        }
+        return this.divide(new Fraction(value));
+    }
+
     public boolean isZero() {
         return this.numerator == 0;
     }
