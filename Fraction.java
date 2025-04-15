@@ -15,6 +15,10 @@ public class Fraction {
         }
     }
 
+    public Fraction(int numerator) {
+        this(numerator,1);
+    }
+
     // Méthodes utilitaires
     private int gcd(int a, int b) {
         if (b == 0) return a;
@@ -29,6 +33,10 @@ public class Fraction {
             int den = this.denominator * other.denominator;
             return new Fraction(num, den);
         }
+    }
+
+    public Fraction add(int value) {
+        return this.add(new Fraction(value));
     }
 
     public Fraction subtract(Fraction other) {
