@@ -66,6 +66,10 @@ public class Fraction {
         return new Fraction(this.numerator * other.numerator, this.denominator * other.denominator);
     }
 
+    public Fraction multiply(int value) {
+        return this.multiply(new Fraction(value));
+    }
+
     public Fraction divide(Fraction other) {
         if (other.numerator == 0) {
             throw new ArithmeticException("Division par zéro");
