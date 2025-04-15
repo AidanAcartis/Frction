@@ -49,6 +49,10 @@ public class Fraction {
         }
     }
 
+    public Fraction subtract(int value) {
+        return this.subtract(new Fraction(value));
+    }
+
      // Inverse d'une fraction
      public Fraction inverse() {
         if (this.numerator == 0) {
