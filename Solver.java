@@ -165,6 +165,8 @@ public class Solver {
 
         // ➕ Réordonner les lignes : mettre les lignes nulles à la fin
         reorderRows();
+        System.out.println("Matrice réordonnée (lignes nulles en bas) :");
+        printAugmentedMatrix();
     
         // Sinon, lecture directe de la solution :
         for (int i = 0; i < nbColumn; i++) {
