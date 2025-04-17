@@ -136,7 +136,7 @@ public class Solver {
         }
     
         // Sinon, lecture directe de la solution :
-        for (int i = 0; i < nbLine; i++) {
+        for (int i = 0; i < nbColumn; i++) {
             Solution[i] = B[i];
         }
     
