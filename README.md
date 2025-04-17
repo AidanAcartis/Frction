@@ -1,5 +1,3 @@
-Voici un exemple de fichier `README.md` pour votre projet Java de résolution de systèmes linéaires avec des fractions :
-
 ---
 
 # Résolution de Systèmes Linéaires avec Fractions en Java
