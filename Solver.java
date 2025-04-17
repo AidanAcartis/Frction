@@ -140,7 +140,7 @@ public class Solver {
             Solution[i] = B[i];
         }
     
-        printSolution();
+        // printSolution();
     }    
 
     public void printSolution() {
