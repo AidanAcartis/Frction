@@ -119,10 +119,29 @@ public class Solver {
 
     public void solve() {
         reduceToEchelonForm();
-        while (verify_value_key()) {
-            fillSolution();
+    
+        // Vérifie s’il existe une contradiction (0 = b ≠ 0)
+        for (int i = 0; i < nbLine; i++) {
+            boolean allZero = true;
+            for (int j = 0; j < nbColumn; j++) {
+                if (!P[i][j].isZero()) {
+                    allZero = false;
+                    break;
+                }
+            }
+            if (allZero && !B[i].isZero()) {
+                System.out.println("Système incompatible !");
+                return;
+            }
         }
-    }
+    
+        // Sinon, lecture directe de la solution :
+        for (int i = 0; i < nbLine; i++) {
+            Solution[i] = B[i];
+        }
+    
+        printSolution();
+    }    
 
     public void printSolution() {
         for (int i = 0; i < Solution.length; i++) {
