@@ -35,5 +35,8 @@ public class FractionApp {
 
         Fraction inverseF2 = f2.inverse();
         System.out.println("Inverse de f2 = " + inverseF2);
+
+        Fraction inverseF4 = f4.inverse();
+        System.out.println("Inverse de f4 = " + inverseF4);
     }
 }
