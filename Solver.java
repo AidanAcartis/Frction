@@ -117,6 +117,34 @@ public class Solver {
         }
     }
 
+    public void reorderRows() {
+        for (int i = 0; i < nbLine - 1; i++) {
+            for (int j = 0; j < nbLine - i - 1; j++) {
+                boolean rowJZero = isRowZero(P[j]);
+                boolean rowJ1Zero = isRowZero(P[j + 1]);
+    
+                if (rowJZero && !rowJ1Zero) {
+                    // Échange les lignes j et j+1 dans P
+                    Fraction[] tempRow = P[j];
+                    P[j] = P[j + 1];
+                    P[j + 1] = tempRow;
+    
+                    // Échange aussi dans B
+                    Fraction tempB = B[j];
+                    B[j] = B[j + 1];
+                    B[j + 1] = tempB;
+                }
+            }
+        }
+    }
+    
+    private boolean isRowZero(Fraction[] row) {
+        for (Fraction f : row) {
+            if (!f.isZero()) return false;
+        }
+        return true;
+    }
+    
     public void solve() {
         reduceToEchelonForm();
     
@@ -134,6 +162,9 @@ public class Solver {
                 return;
             }
         }
+
+        // ➕ Réordonner les lignes : mettre les lignes nulles à la fin
+        reorderRows();
     
         // Sinon, lecture directe de la solution :
         for (int i = 0; i < nbColumn; i++) {
