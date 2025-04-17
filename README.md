@@ -39,20 +39,55 @@ java Main
 ### Exemple de session
 
 ```
-Nombre de lignes : 2
-Nombre de colonnes : 2
+Nombre de lignes : 4
+Nombre de colonnes : 3
 Entrez les coefficients de la matrice P (forme a/b) :
-P[0][0] = 1
-P[0][1] = 1
-P[1][0] = 1
-P[1][1] = -1
+P[0][0] = -1/2
+P[0][1] = 1/3
+P[0][2] = 0
+P[1][0] = 1/2
+P[1][1] = -2/3
+P[1][2] = 1/2
+P[2][0] = 0
+P[2][1] = 1/3
+P[2][2] = -1/2
+P[3][0] = 1
+P[3][1] = 1
+P[3][2] = 1
 Entrez les valeurs du second membre B (forme a/b) :
-B[0] = 3
-B[1] = 1
+B[0] = 0
+B[1] = 0
+B[2] = 0
+B[3] = 1
+Matrice augmentée (P | B) :
+| 1 -2/3 0 | 0 |
+| 0 -1/3 1/2 | 0 |
+| 0 1/3 -1/2 | 0 |
+| 0 5/3 1 | 1 |
+
+Matrice augmentée (P | B) :
+| 1 0 -1 | 0 |
+| 0 1 -3/2 | 0 |
+| 0 0 0 | 0 |
+| 0 0 7/2 | 1 |
+
+Matrice augmentée (P | B) :
+| 1 0 0 | 2/7 |
+| 0 1 0 | 3/7 |
+| 0 0 0 | 0 |
+| 0 0 1 | 2/7 |
+
 Matrice réordonnée (lignes nulles en bas) :
-...
-X[0] = 2
-X[1] = 1
+Matrice augmentée (P | B) :
+| 1 0 0 | 2/7 |
+| 0 1 0 | 3/7 |
+| 0 0 1 | 2/7 |
+| 0 0 0 | 0 |
+
+X[0] = 2/7
+X[1] = 3/7
+X[2] = 2/7
+
 ```
 
 ## 📌 Remarques
